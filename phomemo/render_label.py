@@ -24,7 +24,7 @@ def convert_to_pbm(img, outstrm):
         outstrm.write(' '.join(row) + '\n')
 
 
-def cairo_context_init(surface_w, surface_h, fname, fsize, fweight: NORMAL):
+def cairo_context_init(surface_w, surface_h, fname, fsize, fweight:"NORMAL"):
     imagesize = (surface_w, surface_h)
 
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, *imagesize)

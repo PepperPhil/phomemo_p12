@@ -79,6 +79,7 @@ def main():
     parser = argparse.ArgumentParser(description='Process some integers.')
     parser.add_argument('--font', default="", help='Select font for text rendering')
     parser.add_argument('--font-size', type=int, default=0, help='Set Font size. Use [WIDTH - MARGIN] value as default.')
+    parser.add_argument('--font-weight', default="NORMAL", help='Set Font weight. Default = NORMAL; Others like BOLD, ...')
     parser.add_argument('--width', type=int, default=96, help='The number of dots in the hardware tape width direction. default=96')
     parser.add_argument('--margin', type=int, default=8, help='Set width of unprintable region. default=8')
     parser.add_argument('--offset', type=int, default=0, help='Set rendering position offset')
@@ -94,7 +95,7 @@ def main():
     if args.font_size == 0:
         font_size = surface_h
 
-    cr = cairo_context_init(surface_w, surface_h, args.font, font_size)
+    cr = cairo_context_init(surface_w, surface_h, args.font, font_size, args.font_weight)
 
     render_text(cr, args.text)
     cropped = crop_rendered_text(cr, args.text)

@@ -37,9 +37,9 @@ def cairo_context_init(surface_w, surface_h, fname, fsize, fweight:"NORMAL"):
 
     # setup font
     if fweight == "BOLD":
-        fweight = cairo.FONT_WEIGHT_
+      fweight = cairo.FONT_WEIGHT_BOLD
     else:
-        fweight = cairo.FONT_WEIGHT_NORMAL
+      fweight = cairo.FONT_WEIGHT_NORMAL
     
     cr.set_source_rgb(1, 1, 1)
     cr.select_font_face(fname, cairo.FONT_SLANT_NORMAL, fweight)

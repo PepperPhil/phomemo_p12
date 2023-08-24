@@ -24,7 +24,7 @@ def convert_to_pbm(img, outstrm):
         outstrm.write(' '.join(row) + '\n')
 
 
-def cairo_context_init(surface_w, surface_h, fname, fsize):
+def cairo_context_init(surface_w, surface_h, fname, fsize, fweight: NORMAL):
     imagesize = (surface_w, surface_h)
 
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, *imagesize)
@@ -37,7 +37,7 @@ def cairo_context_init(surface_w, surface_h, fname, fsize):
 
     # setup font
     cr.set_source_rgb(1, 1, 1)
-    cr.select_font_face(fname, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
+    cr.select_font_face(fname, cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_+fweight)
     cr.set_font_size(fsize)
 
     return cr

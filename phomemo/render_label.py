@@ -43,7 +43,7 @@ def cairo_context_init(surface_w, surface_h, fname, fsize, fslant:"NORMAL", fwei
 
     if fslant == "NORMAL":
         fslant = cairo.FONT_SLANT_NORMAL
-    else if fslant == "ITALIC":
+    elif fslant == "ITALIC":
         fslant = cairo.FONT_SLANT_ITALIC
     
     cr.set_source_rgb(1, 1, 1)

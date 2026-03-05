@@ -1,3 +1,4 @@
 Pillow>=9.2.0
 pyserial>=3.5
 pycairo>=1.23.0
+Flask>=3.0.0

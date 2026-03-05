@@ -21,6 +21,7 @@ dependencies = [
     "Pillow",
     "pycairo",
     "pyserial",
+    "Flask",
 ]
 
 [project.urls]
@@ -30,6 +31,7 @@ repository='https://github.com/soburi/phomemo-p12'
 [project.scripts]
 phomemo_render_label = "phomemo.render_label:main"
 phomemo_print_p12 = "phomemo.print_p12:main"
+phomemo_webapp = "phomemo.webapp:main"
 
 [tool.setuptools.packages.find]
 exclude = ["build", "tests"]
